@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Coffee Listing</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        font-family: "Be Vietnam Pro";
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 1400px;
+        background-image: url(images/bg-cafe.jpg);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-color: black;
+      }
+
+      .content {
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: center;
+        flex: 1;
+        max-width: 1200px;
+        height: 1100px;
+        background-color: rgb(26, 26, 26);
+        border-radius: 10px;
+        background-image: url(images/vector.svg);
+        background-position: 64% 3%;
+        background-repeat: no-repeat;
+      }
+
+      h1 {
+        color: white;
+        text-align: center;
+        margin-top: 80px;
+      }
+
+      .introduction {
+        width: 520px;
+        text-align: center;
+        color: rgb(105, 105, 105);
+        font-weight: 500;
+      }
+
+      .all-products-button {
+        background-color: rgba(192, 192, 192, 0.5);
+        margin-right: 15px;
+      }
+
+      .buttons div {
+        margin-top: 25px;
+        padding: 10px;
+        padding-left: 15px;
+        padding-right: 15px;
+        color: white;
+        font-size: 15px;
+        font-weight: 500;
+        border: none;
+        border-radius: 8px;
+      }
+
+      .buttons {
+        display: flex;
+        justify-content: center;
+      }
+
+      .grid-coffee {
+        margin-top: 50px;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        column-gap: 35px;
+        row-gap: 60px;
+      }
+
+      .cup {
+        position: relative;
+      }
+
+      .popular-message {
+        position: absolute;
+        top: 8px;
+        left: 10px;
+        font-size: 10px;
+        background-color: rgb(255, 179, 79);
+        border-radius: 20px;
+        font-weight: bold;
+        padding: 4px;
+        padding-left: 12px;
+        padding-right: 12px;
+      }
+
+      .product-picture {
+        width: 100%;
+        border-radius: 10px;
+      }
+
+      .product {
+        display: grid;
+        grid-template-columns: 1fr 50px;
+        margin-top: 10px;
+        margin-bottom: 5px;
+      }
+      .product-name {
+        color: white;
+      }
+
+      .product-price {
+        background-color: rgba(191, 255, 191, 1);
+        border-radius: 4px;
+        padding: 7px;
+        font-size: 11px;
+        font-weight: bold;
+      }
+
+      .product-more-info {
+        display: flex;
+        align-items: center;
+        flex: 1;
+        font-size: 13px;
+      }
+
+      .rating {
+        color: white;
+      }
+      .available {
+        color: rgb(255, 128, 128);
+        font-size: 13px;
+        font-weight: 500;
+      }
+
+      .votes {
+        color: gray;
+        font-weight: bold;
+      }
+
+      .alignment {
+        display: flex;
+        align-items: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="content">
+      <h1>Our Collection</h1>
+      <p class="introduction">
+        Introducing our Coffee Collection, a selection of unique coffees from
+        different roast types and origins, expertly roasted in small batches and
+        shipped fresh weekly.
+      </p>
+      <nav class="buttons">
+        <div class="all-products-button">All Products</div>
+        <div class="available-products-button">Available Now</div>
+      </nav>
+
+      <div class="grid-coffee">
+        <div class="cup">
+          <div class="popular-message">Popular</div>
+          <img
+            class="product-picture"
+            src="https://csyxkpbavpcrhwqhcpyy.supabase.co/storage/v1/object/public/assets/coffee-challenge/cappuccino.jpg"
+          />
+          <div class="product">
+            <span class="product-name">Cappucino</span>
+            <span class="product-price">$5.20</span>
+          </div>
+          <div class="product-more-info">
+            <img src="images/Star_fill.svg" />
+            <span class="rating">4.7</span>
+            <span class="votes">(65 votes)</span>
+          </div>
+        </div>
+
+        <div class="cup">
+          <div class="popular-message">Popular</div>
+          <img
+            class="product-picture"
+            src="https://csyxkpbavpcrhwqhcpyy.supabase.co/storage/v1/object/public/assets/coffee-challenge/house-coffee.jpg"
+          />
+          <div class="product">
+            <span class="product-name">House Coffee</span>
+            <span class="product-price">$3.50</span>
+          </div>
+          <div class="product-more-info">
+            <img src="images/Star_fill.svg" alt="" />
+            <span class="rating">4.85</span>
+            <span class="votes">(15 votes)</span>
+          </div>
+        </div>
+
+        <div class="cup">
+          <img
+            class="product-picture"
+            src="https://csyxkpbavpcrhwqhcpyy.supabase.co/storage/v1/object/public/assets/coffee-challenge/espresso.jpg"
+          />
+          <div class="product">
+            <span class="product-name">Espresso</span>
+            <span class="product-price">$2.50</span>
+          </div>
+          <div class="product-more-info">
+            <img src="images/Star_fill.svg" />
+            <span class="rating">4.9</span>
+            <span class="votes">(55 votes)</span>
+          </div>
+        </div>
+
+        <div class="cup">
+          <img
+            class="product-picture"
+            src="https://csyxkpbavpcrhwqhcpyy.supabase.co/storage/v1/object/public/assets/coffee-challenge/coffee-latte.jpg"
+          />
+          <div class="product">
+            <span class="product-name">Coffee Latte</span>
+            <span class="product-price">$4.50</span>
+          </div>
+          <div class="product-more-info">
+            <img src="images/Star_fill.svg" />
+            <span class="rating">5.0</span>
+            <span class="votes">(23 votes)</span>
+          </div>
+        </div>
+
+        <div class="cup">
+          <img
+            class="product-picture"
+            src="https://csyxkpbavpcrhwqhcpyy.supabase.co/storage/v1/object/public/assets/coffee-challenge/chocolate-coffee.jpg"
+          />
+          <div class="product">
+            <span class="product-name">Chocolate Coffee</span>
+            <span class="product-price">$4.00</span>
+          </div>
+
+          <div class="alignment">
+            <div class="product-more-info">
+              <img src="images/Star_fill.svg" />
+              <span class="rating">4.65</span>
+              <span class="votes">(122 votes)</span>
+            </div>
+            <span class="available">Sold out</span>
+          </div>
+        </div>
+
+        <div class="cup">
+          <img
+            class="product-picture"
+            src="https://csyxkpbavpcrhwqhcpyy.supabase.co/storage/v1/object/public/assets/coffee-challenge/valentine-special.jpg"
+          />
+          <div class="product">
+            <span class="product-name">Valentine Special</span>
+            <span class="product-price">$5.50</span>
+          </div>
+          <div class="product-more-info">
+            <img src="images/Star.svg" />
+            <span class="rating">No ratings</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
